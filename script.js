@@ -502,7 +502,7 @@ document.addEventListener('DOMContentLoaded', () => {
       formStatus.innerHTML = '';
 
       try {
-        const response = await fetch('https://formsubmit.co/ajax/eca721d44f6e2f6acf5009b49c801f04', {
+        const response = await fetch('https://formsubmit.co/ajax/debopriyokarmaker@gmail.com', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -520,7 +520,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const data = await response.json().catch(() => null);
 
-        if (response.ok && (data?.success === 'true' || data?.success === true || response.status === 200)) {
+        if (response.ok && (data?.success === 'true' || data?.success === true)) {
           // Record successful submission for rate-limiting
           sessionStorage.setItem('portfolio_form_last_sub', Date.now().toString());
 
@@ -541,12 +541,18 @@ document.addEventListener('DOMContentLoaded', () => {
           successSvg.innerHTML = '<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline>';
 
           const successMsgSpan = document.createElement('span');
-          // STRICT textContent assignment: guarantees malicious tags like <script> or <img onerror=...> render purely as plain text
           successMsgSpan.textContent = `Message sent! Thank you, ${name}. I will reply to you at ${email} shortly.`;
 
           formStatus.appendChild(successSvg);
           formStatus.appendChild(successMsgSpan);
 
+          contactForm.reset();
+        } else if (data?.message && data.message.toLowerCase().includes('activation')) {
+          formStatus.className = 'form-status visible status-success';
+          formStatus.innerHTML = `
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span>Form submitted! FormSubmit sent an activation link to <strong>debopriyokarmaker@gmail.com</strong>. Please check your inbox or spam folder and click 'Activate Form' once.</span>
+          `;
           contactForm.reset();
         } else {
           throw new Error(data?.message || 'Transmission failed');
