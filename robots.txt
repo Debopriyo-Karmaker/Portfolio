@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /old_portfolio/
+Disallow: /scratch/
+Allow: /

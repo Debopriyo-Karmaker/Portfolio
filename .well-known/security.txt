@@ -1,0 +1,9 @@
+# RFC 9116 Security Vulnerability Disclosure Policy
+# Debopriyo Karmaker — Cybersecurity Researcher
+
+Contact: mailto:debopriyokarmaker@gmail.com
+Expires: 2027-09-09T00:00:00.000Z
+Preferred-Languages: en, bn
+Canonical: https://debopriyokarmaker.me/.well-known/security.txt
+Policy: https://debopriyokarmaker.me/#contact
+Acknowledgments: https://ctftime.org/team/433462/
