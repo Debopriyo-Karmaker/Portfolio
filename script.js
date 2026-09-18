@@ -502,7 +502,7 @@ document.addEventListener('DOMContentLoaded', () => {
       formStatus.innerHTML = '';
 
       try {
-        const response = await fetch('https://formsubmit.co/ajax/debopriyokarmaker@gmail.com', {
+        const response = await fetch('https://formsubmit.co/ajax/eca721d44f6e2f6acf5009b49c801f04', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
