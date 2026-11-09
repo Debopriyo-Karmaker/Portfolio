@@ -1,1322 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Debopriyo Karmaker</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Debopriyo Karmaker</title>
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Debopriyo Karmaker — cybersecurity researcher, machine learning practitioner and freelance web developer based in Dhaka, Bangladesh.">
+<meta name="theme-color" content="#07070a">
+<meta property="og:title" content="Debopriyo Karmaker — Portfolio">
+<meta property="og:description" content="Cybersecurity researcher, CTF player and web developer. Projects, skills and contact.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff4a3a'/%3E%3Ctext x='32' y='43' font-family='Impact,Arial Black,sans-serif' font-size='30' fill='white' text-anchor='middle'%3EDK%3C/text%3E%3C/svg%3E">
 
-  <!-- Security Directives -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://formsubmit.co; object-src 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co;">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=()">
-  
-  <!-- SEO & Open Graph Meta Tags -->
-  <meta name="description" content="Debopriyo Karmaker — Cybersecurity Researcher, Machine Learning Practitioner, and Systems Developer at BRAC University. Active CTF player for BRACU SHIKARI (#8 Bangladesh, #244 World on CTFtime).">
-  <meta name="keywords" content="Debopriyo Karmaker, BRACU SHIKARI, CTFtime, Cybersecurity, Web Developer, Machine Learning, Neural Networks, Cisco Packet Tracer, Network Engineering, BRAC University, DIGIX, POSIX C, Python, SOC Automation, Wireshark">
-  <meta name="author" content="Debopriyo Karmaker">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://debopriyokarmaker.me/">
-  
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://debopriyokarmaker.me/">
-  <meta property="og:site_name" content="Debopriyo Karmaker">
-  <meta property="og:title" content="Debopriyo Karmaker — Cybersecurity, ML &amp; Systems Developer">
-  <meta property="og:description" content="Cybersecurity Researcher, ML Practitioner &amp; Systems Developer. Competitive CTF player for BRACU SHIKARI (#8 Bangladesh, #244 World). Building secure systems, ML pipelines, and enterprise architectures.">
-  <meta property="og:image" content="https://debopriyokarmaker.me/photo.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Debopriyo Karmaker — Cybersecurity, ML &amp; Systems Developer">
-  <meta name="twitter:description" content="Cybersecurity Researcher, ML Practitioner &amp; Systems Developer · BRACU SHIKARI CTF (#8 Bangladesh, #244 World).">
-  <meta name="twitter:image" content="https://debopriyokarmaker.me/photo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat+Brush&family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Space+Mono:wght@400;700&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="canonical" href="https://debopriyokarmaker.vercel.app/">
+<link rel="stylesheet" href="style.css">
+<script src="boot.js"></script>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%2308080a'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='700' font-size='46' fill='%23ffffff'>DK</text></svg>">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Lenis Smooth Scroll -->
-  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js" integrity="sha384-eD5ubmuCcvTdCADWuSchJYE7wcj2nzNr0itbrh6w/KJyBiltSZ8w3VFRBSWu5YQ8" crossorigin="anonymous"></script>
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=10.0">
-
-  <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Debopriyo Karmaker",
-    "jobTitle": "Cybersecurity Researcher & Web Developer",
-    "image": "https://debopriyokarmaker.me/photo.png",
-    "url": "https://debopriyokarmaker.me",
-    "alumniOf": "BRAC University",
-    "worksFor": {
-      "@type": "CollegeOrUniversity",
-      "name": "BRAC University"
-    },
-    "memberOf": {
-      "@type": "SportsTeam",
-      "name": "BRACU SHIKARI",
-      "url": "https://bracu-shikari.vercel.app/"
-    },
-    "description": "Cybersecurity researcher and web developer specializing in vulnerability assessment, threat intelligence, competitive CTF (BRACU SHIKARI), machine learning pipelines, and modern web platforms.",
-    "knowsAbout": [
-      "Cybersecurity",
-      "Web Development",
-      "Machine Learning",
-      "Operating Systems",
-      "Network Engineering",
-      "Cisco Packet Tracer",
-      "Python",
-      "Linux"
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Dhaka",
-      "addressCountry": "Bangladesh"
-    },
-    "sameAs": [
-      "https://github.com/Debopriyo-Karmaker",
-      "https://linkedin.com/in/dkarmaker",
-      "https://tryhackme.com/p/debopriyokarmaker",
-      "https://ctftime.org/team/433462/"
-    ]
-  }
-  </script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Debopriyo Karmaker", "url": "https://debopriyokarmaker.vercel.app/", "jobTitle": "Cybersecurity researcher and web developer", "alumniOf": "BRAC University", "address": {"@type": "PostalAddress", "addressLocality": "Dhaka", "addressCountry": "BD"}, "sameAs": ["https://github.com/Debopriyo-Karmaker", "https://www.linkedin.com/in/dkarmaker", "https://tryhackme.com/p/debopriyokarmaker", "https://ctftime.org/team/433462"]}</script>
 </head>
 <body>
-  <!-- Ambient Background Canvas -->
-  <canvas id="bg-canvas" aria-hidden="true"></canvas>
-
-  <!-- TOP MINIMALIST NAVBAR (Sharp & Animated) -->
-  <header class="site-header" id="site-header">
-    <nav class="navbar" aria-label="Main Navigation">
-      <a href="#hero" class="brand-logo" id="brand-logo">
-        <span class="brand-name">Debopriyo Karmaker</span>
-      </a>
-
-      <ul class="nav-menu" id="nav-menu">
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#work" class="nav-link">Selected Work</a></li>
-        <li><a href="#capabilities" class="nav-link">Capabilities</a></li>
-        <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-
-      <div class="nav-actions">
-        <!-- Direct CV Download Link in Navbar -->
-        <a href="Debopriyo_Karmaker_CV.pdf" target="_blank" rel="noopener noreferrer" download="Debopriyo_Karmaker_CV.pdf" class="btn-pill-cv" id="nav-cv-btn" title="Download Debopriyo Karmaker CV (PDF)">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-          <span>CV / Resume</span>
-        </a>
-        <a href="#contact" class="btn-pill-nav" id="nav-cta-btn">Get in Touch</a>
-        <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-          <span class="hamburger-bar"></span>
-          <span class="hamburger-bar"></span>
-        </button>
-      </div>
-    </nav>
-  </header>
-
-  <main id="main-content">
-
-    <!-- Hero Section -->
-    <section class="hero-section" id="hero">
-      <div class="container hero-container">
-        <!-- Hero Content (Left Column) -->
-        <div class="hero-content">
-          <h1 class="hero-title">
-            Crafting resilient<br class="hero-br">
-            systems &amp; refined<br class="hero-br">
-            digital experiences
-          </h1>
-
-          <p class="hero-description">
-            I'm a Computer Science student at BRAC University focused on cybersecurity research and modern web development. When I'm not hunting vulnerabilities or competing in CTFs with team BRACU SHIKARI, I design and build clean, performant web platforms and explore low-level POSIX systems.
-          </p>
-
-          <div class="hero-cta-group">
-            <a href="#work" class="btn-primary" id="hero-cta-work">
-              <span>Explore Work</span>
-            </a>
-            <a href="Debopriyo_Karmaker_CV.pdf" target="_blank" rel="noopener noreferrer" download="Debopriyo_Karmaker_CV.pdf" class="btn-secondary" id="hero-cta-cv">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-              <span>Download CV</span>
-            </a>
-            <a href="#about" class="btn-ghost" id="hero-cta-bio">
-              <span>Read Bio</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Hero Portrait -->
-        <div class="hero-visual">
-          <div class="portrait-stage">
-            <img src="photo.png" alt="Debopriyo Karmaker — Cybersecurity Researcher &amp; Web Developer" class="portrait-img" id="hero-portrait" width="1920" height="1080" fetchpriority="high">
-            <div class="portrait-vignette" aria-hidden="true"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Highlight Cards -->
-      <div class="container">
-        <div class="hero-highlights-strip">
-          <!-- Card 1: BRACU SHIKARI CTF Ranking -->
-          <div class="highlight-card cyber-card theme-amber" data-tilt>
-            <div class="corner-elements" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="cyber-lines" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="glowing-elements" aria-hidden="true"><div class="glow-orb"></div></div>
-            <div class="card-glare"></div>
-            <div class="card-inner-relative">
-              <div class="card-top-row">
-                <span class="highlight-pill">BRACU SHIKARI CTF</span>
-                <span class="telemetry-badge ctf-badge"><span class="badge-pulse-dot"></span>#8 BD · #244 World</span>
-              </div>
-              <div class="telemetry-main">
-                <span class="telemetry-value">BRACU SHIKARI</span>
-                <span class="telemetry-label">Ranked #8 in Bangladesh · #244 Globally on CTFtime</span>
-              </div>
-              <p class="telemetry-specs">ctftime.org/team/433462 · Web Sec · Crypto · Forensics</p>
-            </div>
-          </div>
-
-          <!-- Card 2: Cybersecurity & Threat Intelligence -->
-          <div class="highlight-card cyber-card theme-emerald" data-tilt>
-            <div class="corner-elements" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="cyber-lines" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="glowing-elements" aria-hidden="true"><div class="glow-orb"></div></div>
-            <div class="card-glare"></div>
-            <div class="card-inner-relative">
-              <div class="card-top-row">
-                <span class="highlight-pill">CYBERSECURITY</span>
-                <span class="telemetry-badge security-badge"><span class="badge-pulse-dot"></span>Blue Team</span>
-              </div>
-              <div class="telemetry-main">
-                <span class="telemetry-value">Threat Intelligence</span>
-                <span class="telemetry-label">Vulnerability Assessment &amp; SOC Automation</span>
-              </div>
-              <p class="telemetry-specs">Burp Suite · Wireshark · Nmap · OWASP Top 10 · IOCs</p>
-            </div>
-          </div>
-
-          <!-- Card 3: Web Development (DIGIX & Full-Stack) -->
-          <div class="highlight-card cyber-card theme-cyan" data-tilt>
-            <div class="corner-elements" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="cyber-lines" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="glowing-elements" aria-hidden="true"><div class="glow-orb"></div></div>
-            <div class="card-glare"></div>
-            <div class="card-inner-relative">
-              <div class="card-top-row">
-                <span class="highlight-pill">WEB DEVELOPMENT</span>
-                <span class="telemetry-badge"><span class="badge-pulse-dot"></span>Client &amp; Apps</span>
-              </div>
-              <div class="telemetry-main">
-                <span class="telemetry-value">Modern Web Platforms</span>
-                <span class="telemetry-label">Web Development &amp; Full-Stack Apps</span>
-              </div>
-              <p class="telemetry-specs">HTML5 · CSS3 · JavaScript · React · Node.js · APIs</p>
-            </div>
-          </div>
-
-          <!-- Card 4: Systems Engineering -->
-          <div class="highlight-card cyber-card theme-violet" data-tilt>
-            <div class="corner-elements" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="cyber-lines" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="glowing-elements" aria-hidden="true"><div class="glow-orb"></div></div>
-            <div class="card-glare"></div>
-            <div class="card-inner-relative">
-              <div class="card-top-row">
-                <span class="highlight-pill">SYSTEMS &amp; OS</span>
-                <span class="telemetry-badge"><span class="badge-pulse-dot"></span>POSIX C11</span>
-              </div>
-              <div class="telemetry-main">
-                <span class="telemetry-value">Linux Concurrency</span>
-                <span class="telemetry-label">Process Scheduler &amp; Mutex Synchronization</span>
-              </div>
-              <p class="telemetry-specs">C (C11) · POSIX Threads · Shared Memory IPC · Sockets</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="section-padding about-section" id="about">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">01 // BIOGRAPHY &amp; ENGINEERING DOSSIER</span>
-          <h2 class="section-title">Bridging offensive security research with modern web development.</h2>
-          <p class="section-subtext">Computer Science &amp; Engineering undergraduate at BRAC University specializing in Cybersecurity (Blue Team, threat analysis, competitive CTF) and Web Development (clean, high-performance web applications).</p>
-        </div>
-
-        <div class="intro-grid">
-          <!-- Left Column: Biography Narrative -->
-          <div class="intro-narrative">
-            <div class="intro-bio-card cyber-card theme-cyan">
-              <div class="corner-elements" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-              <div class="card-inner-relative">
-                <h3 class="bio-subtitle">About Me, Cybersecurity Vision &amp; Web Craft</h3>
-                <p class="bio-text">
-                  I am a Computer Science &amp; Engineering undergraduate at BRAC University in Dhaka (class of 2027), driven by an unwavering ambition to forge a high-impact career in cybersecurity. My core dream is to become a top-tier security researcher and defensive engineer—safeguarding mission-critical digital infrastructure, dissecting adversary tactics, and engineering resilient fortifications that withstand sophisticated modern attacks.
-                </p>
-                <p class="bio-text">
-                  Cybersecurity is not just an academic discipline for me; it is a relentless, hands-on craft. I am driven to continuously explore deeper frontiers of the field—from offensive vulnerability assessments and penetration testing to network forensics, reverse engineering, and low-level POSIX systems. I sharpen these capabilities in competitive CTF battlegrounds alongside my team BRACU SHIKARI (<a href="https://ctftime.org/team/433462/" target="_blank" rel="noopener noreferrer" class="bio-link">ctftime.org/team/433462</a>), currently ranked #8 nationwide in Bangladesh and #244 globally on CTFtime, complemented by continuous lab research on TryHackMe and HackTheBox.
-                </p>
-                <p class="bio-text">
-                  Side by side with my cybersecurity pursuits, I actively engineer production web platforms as a freelance web developer. Building client applications and full-stack solutions has grounded me in clean software architecture, high-performance delivery, and database engineering—enabling me to write code that is responsive, user-centered, and secure by design from day one. I also believe in elevating others: as an educator at BRAC University's Ethical Hacking Bootcamp, I guide junior students through practical threat modeling, Burp Suite, Wireshark, and defensive security fundamentals.
-                </p>
-
-                <!-- Bio Action Buttons -->
-                <div class="bio-action-row">
-                  <a href="Debopriyo_Karmaker_CV.pdf" target="_blank" rel="noopener noreferrer" download="Debopriyo_Karmaker_CV.pdf" class="btn-cv-download-card">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                    <span>Download Curriculum Vitae (PDF)</span>
-                  </a>
-                  <a href="https://ctftime.org/team/433462/" target="_blank" rel="noopener noreferrer" class="btn-profile-badge">
-                    <span class="ctf-dot"></span>
-                    <span>BRACU SHIKARI (#8 BD) ↗</span>
-                  </a>
-                  <a href="https://bracu-shikari.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-profile-badge">
-                    <span>Team Website ↗</span>
-                  </a>
-                  <a href="https://tryhackme.com/p/debopriyokarmaker" target="_blank" rel="noopener noreferrer" class="btn-profile-badge">
-                    <span class="thm-dot"></span>
-                    <span>TryHackMe ↗</span>
-                  </a>
-                  <a href="https://linkedin.com/in/dkarmaker" target="_blank" rel="noopener noreferrer" class="btn-profile-badge">
-                    <span>LinkedIn ↗</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-            <!-- Credentials -->
-          <div class="intro-credentials-col">
-            <!-- Credential 1: BRACU SHIKARI CTF Spotlight -->
-            <div class="credential-card ctf-spotlight-card cyber-card theme-amber">
-              <div class="corner-elements" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-              <div class="card-inner-relative">
-                <div class="cred-header">
-                  <span class="cred-tag">CTF TEAM PROFILE</span>
-                  <span class="cred-status accent">Rank #8 BD · #244 World</span>
-                </div>
-                <h4 class="cred-title">BRACU SHIKARI</h4>
-                <p class="cred-subtitle">Official BRAC University CTF Team · CTFtime Ranked</p>
-                <ul class="cred-list">
-                  <li><strong>CTFtime Ranking:</strong> #8 in Bangladesh &amp; #244 Worldwide</li>
-                  <li><strong>Specialties:</strong> Web Exploitation, Network Forensics, Cryptography, Reverse Engineering</li>
-                  <li><strong>Team Links:</strong> <a href="https://ctftime.org/team/433462/" target="_blank" rel="noopener noreferrer" class="bio-link">CTFtime Profile</a> · <a href="https://bracu-shikari.vercel.app/" target="_blank" rel="noopener noreferrer" class="bio-link">bracu-shikari.vercel.app</a></li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Credential 2: Education -->
-            <div class="credential-card cyber-card theme-violet">
-              <div class="corner-elements" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-              <div class="card-inner-relative">
-                <div class="cred-header">
-                  <span class="cred-tag">EDUCATION</span>
-                  <span class="cred-status">2023 – 2027</span>
-                </div>
-                <h4 class="cred-title">BRAC University</h4>
-                <p class="cred-subtitle">B.Sc. in Computer Science and Engineering</p>
-                <p class="cred-details">Focus on Operating Systems, Concurrency, Artificial Intelligence &amp; Machine Learning, Enterprise Networking, Database Systems, and Security Engineering.</p>
-              </div>
-            </div>
-
-            <!-- Certifications -->
-            <div class="credential-card cyber-card theme-emerald">
-              <div class="corner-elements" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-              <div class="card-inner-relative">
-                <div class="cred-header">
-                  <span class="cred-tag">INDUSTRY CERTIFICATIONS</span>
-                  <span class="cred-status">Verified</span>
-                </div>
-                <div class="cert-pills-wrap">
-                  <span class="cert-pill">Deloitte Australia Cyber Job Sim</span>
-                  <span class="cert-pill">Linux for Data Engineers</span>
-                  <span class="cert-pill">IT &amp; Cybersecurity 101</span>
-                  <span class="cert-pill">Cybersecurity for Beginners</span>
-                  <span class="cert-pill">Data Science Statistics</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Selected Works -->
-    <section class="section-padding work-section" id="work">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">02 // SELECTED WORKS</span>
-          <h2 class="section-title">Production systems, ML pipelines &amp; network infrastructure.</h2>
-          <p class="section-subtext">Interactive 3D cyber cards equipped with animated scanning lines, corner optics, and full repository documentation across web applications, machine learning pipelines, enterprise networking, cybersecurity, and low-level operating systems.</p>
-        </div>
-
-        <div class="projects-grid">
-
-          <!-- Project 1: DIGIX Web Development (Client Project) -->
-          <article class="project-card cyber-card theme-cyan" data-tilt>
-            <div class="corner-elements" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="cyber-lines" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="scan-line" aria-hidden="true"></div>
-            <div class="glowing-elements" aria-hidden="true"><div class="glow-orb"></div></div>
-            <div class="card-glare"></div>
-
-            <!-- Visual Demonstration HUD Header -->
-            <div class="card-preview-stage">
-              <div class="preview-browser-bar">
-                <div class="browser-dots">
-                  <span class="dot dot-close"></span>
-                  <span class="dot dot-minimize"></span>
-                  <span class="dot dot-maximize"></span>
-                </div>
-                <span class="preview-path">~/client-work/digix-corporate-portal</span>
-                <span class="preview-status-badge badge-cyan"><span class="badge-pulse-dot"></span>IN DEVELOPMENT</span>
-              </div>
-              <div class="preview-visual-body">
-                <div class="visual-mockup-screen">
-                  <div class="mockup-header-line">
-                    <span class="mockup-brand-logo">DIGIX</span>
-                    <span class="mockup-nav-ghost">Overview · Solutions · Services · Contact</span>
-                  </div>
-                  <div class="mockup-hero-banner">
-                    <div class="mockup-text-block">
-                      <div class="mockup-title-bar"></div>
-                      <div class="mockup-sub-bar"></div>
-                    </div>
-                    <div class="mockup-metric-chips">
-                      <span class="chip-metric">PERF: 0.4s FCP</span>
-                      <span class="chip-metric">AUDIT: 100/100</span>
-                      <span class="chip-metric">VIEW: Responsive</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-                        <!-- Project Details Content -->
-            <div class="card-content-inner">
-              <div class="project-card-header">
-                <span class="project-domain-badge">CLIENT WEB DEVELOPMENT</span>
-                <span class="project-status-pill pill-cyan">IN DEVELOPMENT</span>
-              </div>
-              <h3 class="project-title">DIGIX Web Development</h3>
-              <p class="project-desc">
-                Commissioned by DIGIX as their freelance web developer to design and engineer their official corporate website from scratch. Built a modern, fast, and responsive digital presence to elevate their brand identity and engage client inquiries.
-              </p>
-              <ul class="project-highlights">
-                <li class="project-highlight-item">
-                  <span class="highlight-pip" aria-hidden="true"></span>
-                  <span><strong class="highlight-key">Client Status:</strong> Corporate web portal actively in development; lead freelance developer managing end-to-end design, corporate branding, and engineering.</span>
-                </li>
-                <li class="project-highlight-item">
-                  <span class="highlight-pip" aria-hidden="true"></span>
-                  <span><strong class="highlight-key">Performance:</strong> Built with semantic HTML5, modern CSS, and vanilla JavaScript for 60 FPS fluidity across mobile and desktop.</span>
-                </li>
-              </ul>
-              <div class="project-tags">
-                <span class="tech-tag">HTML5 / CSS3</span>
-                <span class="tech-tag">Vanilla JavaScript</span>
-                <span class="tech-tag">Client Project</span>
-                <span class="tech-tag">Corporate Branding</span>
-                <span class="tech-tag">Web Development</span>
-              </div>
-              <div class="project-card-footer">
-                <a href="https://github.com/Debopriyo-Karmaker/DIGIX" target="_blank" rel="noopener noreferrer" class="project-action-link">
-                  <span>View GitHub Repository</span>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 2: Linux Process Manager & CPU Scheduler (C11 POSIX) -->
-          <article class="project-card cyber-card theme-violet" data-tilt>
-            <div class="corner-elements" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="cyber-lines" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="scan-line" aria-hidden="true"></div>
-            <div class="glowing-elements" aria-hidden="true"><div class="glow-orb"></div></div>
-            <div class="card-glare"></div>
-
-            <div class="card-preview-stage">
-              <div class="preview-browser-bar">
-                <div class="browser-dots">
-                  <span class="dot dot-close"></span>
-                  <span class="dot dot-minimize"></span>
-                  <span class="dot dot-maximize"></span>
-                </div>
-                <span class="preview-path">~/kernel/posix_scheduler.c</span>
-                <span class="preview-status-badge badge-violet"><span class="badge-pulse-dot"></span>POSIX C11 KERNEL</span>
-              </div>
-              <div class="preview-visual-body">
-                <div class="visual-terminal-screen">
-                  <div class="terminal-row row-cyan">$ ./process_sentinel --sched=round_robin --threads=8</div>
-                  <div class="terminal-row row-dim">[INIT] Shared Process Table Allocated: 0x7FFF004B</div>
-                  <div class="terminal-row row-white">[OK] PID: 1024 [SCHED_FIFO] Thread Mutex Acquired</div>
-                  <div class="terminal-row row-emerald">[CLEAN] Zombie Process Reaped: PID 1045 (Exit 0)</div>
-                </div>
-              </div>
-            </div>
-
-                        <div class="card-content-inner">
-              <div class="project-card-header">
-                <span class="project-domain-badge">OPERATING SYSTEMS &amp; C11</span>
-                <span class="project-status-pill pill-violet">POSIX THREADS</span>
-              </div>
-              <h3 class="project-title">POSIX Process Manager &amp; CPU Scheduler</h3>
-              <p class="project-desc">
-                A Linux operating system process manager and thread synchronizer built in C11. Implements process lifecycle management, POSIX mutex locks, process waiting, zombie process cleanup algorithms, and shared memory IPC for predictable multi-tasking.
-              </p>
-              <ul class="project-highlights">
-                <li class="project-highlight-item">
-                  <span class="highlight-pip" aria-hidden="true"></span>
-                  <span><strong class="highlight-key">Concurrency Engine:</strong> Engineered multithreaded task scheduling with POSIX threads (pthreads), mutex locks, and shared memory IPC.</span>
-                </li>
-                <li class="project-highlight-item">
-                  <span class="highlight-pip" aria-hidden="true"></span>
-                  <span><strong class="highlight-key">Systems Focus:</strong> Designed automated parent-child waitpid routines, zombie process reaping, and deterministic state tracking.</span>
-                </li>
-              </ul>
-              <div class="project-tags">
-                <span class="tech-tag">C (C11)</span>
-                <span class="tech-tag">POSIX Threads</span>
-                <span class="tech-tag">Mutex Locks</span>
-                <span class="tech-tag">Linux OS</span>
-                <span class="tech-tag">CPU Scheduling</span>
-              </div>
-              <div class="project-card-footer">
-                <a href="https://github.com/Debopriyo-Karmaker/mini-process-manager" target="_blank" rel="noopener noreferrer" class="project-action-link">
-                  <span>View GitHub Repository</span>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 3: Phishing Email Analyzer & IOC Extractor (SOC Tooling) -->
-          <article class="project-card cyber-card theme-emerald" data-tilt>
-            <div class="corner-elements" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="cyber-lines" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="scan-line" aria-hidden="true"></div>
-            <div class="glowing-elements" aria-hidden="true"><div class="glow-orb"></div></div>
-            <div class="card-glare"></div>
-
-            <div class="card-preview-stage">
-              <div class="preview-browser-bar">
-                <div class="browser-dots">
-                  <span class="dot dot-close"></span>
-                  <span class="dot dot-minimize"></span>
-                  <span class="dot dot-maximize"></span>
-                </div>
-                <span class="preview-path">~/soc/threat_ioc_triage.py</span>
-                <span class="preview-status-badge badge-emerald"><span class="badge-pulse-dot"></span>SOC BLUE TEAM</span>
-              </div>
-              <div class="preview-visual-body">
-                <div class="visual-security-screen">
-                  <div class="sec-status-row">
-                    <span class="sec-badge pass">SPF: PASS</span>
-                    <span class="sec-badge pass">DKIM: PASS</span>
-                    <span class="sec-badge fail">DMARC: FAIL</span>
-                  </div>
-                  <div class="sec-payload-box">
-                    <span class="payload-label">EXTRACTED &amp; DEFANGED IOC:</span>
-                    <code class="payload-code">hxxps://auth-bracu-verify[.]net/payload.bin</code>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-                        <div class="card-content-inner">
-              <div class="project-card-header">
-                <span class="project-domain-badge">CYBERSECURITY &amp; THREAT INTEL</span>
-                <span class="project-status-pill pill-emerald">SOC AUTOMATION</span>
-              </div>
-              <h3 class="project-title">Phishing Email Analyzer &amp; IOC Extractor</h3>
-              <p class="project-desc">
-                Automated Blue Team Python utility that parses suspicious RFC 822 email files (.eml), extracts Indicators of Compromise (malicious URLs, IPv4/IPv6, domains), defangs threats, and performs SPF, DKIM, and DMARC header security validation.
-              </p>
-              <ul class="project-highlights">
-                <li class="project-highlight-item">
-                  <span class="highlight-pip" aria-hidden="true"></span>
-                  <span><strong class="highlight-key">Analysis Engine:</strong> Automated RFC 822 MIME parsing, payload normalization, and threat defanging into safe security reports.</span>
-                </li>
-                <li class="project-highlight-item">
-                  <span class="highlight-pip" aria-hidden="true"></span>
-                  <span><strong class="highlight-key">Blue Team Focus:</strong> Cross-checks SPF, DKIM, and DMARC authentication headers to detect sender spoofing and delivery tampering.</span>
-                </li>
-              </ul>
-              <div class="project-tags">
-                <span class="tech-tag">Python 3</span>
-                <span class="tech-tag">Email Security</span>
-                <span class="tech-tag">IOC Extraction</span>
-                <span class="tech-tag">SPF / DMARC</span>
-                <span class="tech-tag">SOC Tooling</span>
-              </div>
-              <div class="project-card-footer">
-                <a href="https://github.com/Debopriyo-Karmaker/Phishing-Email-Detection-IOC-Extraction-Tool" target="_blank" rel="noopener noreferrer" class="project-action-link">
-                  <span>View GitHub Repository</span>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 4: Credit Risk Assessment & Loan Status Prediction (ML & Neural Network) -->
-          <article class="project-card cyber-card theme-violet" data-tilt id="project-loan-risk-ml">
-            <div class="corner-elements" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="cyber-lines" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="scan-line" aria-hidden="true"></div>
-            <div class="glowing-elements" aria-hidden="true"><div class="glow-orb"></div></div>
-            <div class="card-glare"></div>
-
-            <div class="card-preview-stage">
-              <div class="preview-browser-bar">
-                <div class="browser-dots">
-                  <span class="dot dot-close"></span>
-                  <span class="dot dot-minimize"></span>
-                  <span class="dot dot-maximize"></span>
-                </div>
-                <span class="preview-path">~/ml/credit_risk_pipeline.py</span>
-                <span class="preview-status-badge badge-violet"><span class="badge-pulse-dot"></span>MLP NEURAL NET</span>
-              </div>
-              <div class="preview-visual-body">
-                <div class="visual-terminal-screen">
-                  <div class="terminal-row row-violet">$ python train_eval.py --dataset=14.csv --split=80/20</div>
-                  <div class="terminal-row row-dim">[DATASET] 45,000 Records · 14 Features · LabelEncoder &amp; Scaler</div>
-                  <div class="terminal-row row-emerald">[PERF] MLPClassifier (32, 16): 91.53% Acc · 0.9660 ROC-AUC</div>
-                  <div class="terminal-row row-white">[MODELS] Decision Tree: 89.84% · Logistic Regression: 89.01%</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-content-inner">
-              <div class="project-card-header">
-                <span class="project-domain-badge">MACHINE LEARNING &amp; ARTIFICIAL INTELLIGENCE</span>
-                <span class="project-status-pill pill-violet">NEURAL NETWORK (MLP)</span>
-              </div>
-              <h3 class="project-title">Credit Risk Assessment &amp; Loan Status Prediction</h3>
-              <p class="project-desc">
-                An end-to-end machine learning pipeline predicting loan approval outcomes and evaluating institutional credit risk across 45,000 financial records. Benchmarks supervised algorithms and deploys an optimized Multilayer Perceptron (MLP) neural network achieving 91.53% accuracy and 0.9660 ROC-AUC.
-              </p>
-              <ul class="project-highlights">
-                <li class="project-highlight-item">
-                  <span class="highlight-pip" aria-hidden="true"></span>
-                  <span><strong class="highlight-key">Neural Architecture:</strong> Fine-tuned an MLPClassifier (hidden layers of 32 &amp; 16 neurons) outperforming baseline models with 91.53% accuracy, 0.8728 precision, and 0.9660 AUC.</span>
-                </li>
-                <li class="project-highlight-item">
-                  <span class="highlight-pip" aria-hidden="true"></span>
-                  <span><strong class="highlight-key">Pipeline Engineering:</strong> Implemented data preprocessing with numerical mean and categorical mode imputation, LabelEncoding, StandardScaler normalization, and K-Means clustering.</span>
-                </li>
-              </ul>
-              <div class="project-tags">
-                <span class="tech-tag">Python 3</span>
-                <span class="tech-tag">Scikit-Learn</span>
-                <span class="tech-tag">Pandas &amp; NumPy</span>
-                <span class="tech-tag">Neural Networks (MLP)</span>
-                <span class="tech-tag">Credit Risk Modeling</span>
-                <span class="tech-tag">BRACU CSE 422</span>
-              </div>
-              <div class="project-card-footer">
-                <a href="https://github.com/Debopriyo-Karmaker/Loan-status-classification-ml" target="_blank" rel="noopener noreferrer" class="project-action-link" id="project-link-loan-risk">
-                  <span>View GitHub Repository</span>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 5: BoardNet Enterprise Network Topology & Routing Architecture (Cisco Infrastructure) -->
-          <article class="project-card cyber-card theme-emerald" data-tilt id="project-boardnet-enterprise">
-            <div class="corner-elements" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="cyber-lines" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="scan-line" aria-hidden="true"></div>
-            <div class="glowing-elements" aria-hidden="true"><div class="glow-orb"></div></div>
-            <div class="card-glare"></div>
-
-            <div class="card-preview-stage">
-              <div class="preview-browser-bar">
-                <div class="browser-dots">
-                  <span class="dot dot-close"></span>
-                  <span class="dot dot-minimize"></span>
-                  <span class="dot dot-maximize"></span>
-                </div>
-                <span class="preview-path">~/cisco/boardnet_enterprise.pkt</span>
-                <span class="preview-status-badge badge-emerald"><span class="badge-pulse-dot"></span>CISCO PACKET TRACER</span>
-              </div>
-              <div class="preview-visual-body">
-                <div class="visual-terminal-screen">
-                  <div class="terminal-row row-emerald">% CISCO-IOS# show ip route | include 10.79.0.0</div>
-                  <div class="terminal-row row-white">R 10.79.0.0/16 [120/2] via 10.79.20.1 (RIPv2 Core Triangle Active)</div>
-                  <div class="terminal-row row-cyan">S 10.79.40.0/24 [150/0] via 10.79.30.2 (Floating Failover Backup)</div>
-                  <div class="terminal-row row-amber">[SERVICES] DHCP Helper Active · DNS (.edu.bd) · SMTP/POP3 Online</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-content-inner">
-              <div class="project-card-header">
-                <span class="project-domain-badge">ENTERPRISE NETWORKING &amp; CISCO</span>
-                <span class="project-status-pill pill-emerald">FAULT-TOLERANT ARCHITECTURE</span>
-              </div>
-              <h3 class="project-title">BoardNet Enterprise Network Topology &amp; Routing Architecture</h3>
-              <p class="project-desc">
-                A fault-tolerant enterprise network infrastructure connecting six national examination boards across Bangladesh in Cisco Packet Tracer. Features mathematically optimized VLSM subnetting (10.79.0.0/16), dynamic RIPv2 routing, automated floating static failover, and multi-service automation.
-              </p>
-              <ul class="project-highlights">
-                <li class="project-highlight-item">
-                  <span class="highlight-pip" aria-hidden="true"></span>
-                  <span><strong class="highlight-key">Hybrid Routing &amp; Failover:</strong> Implemented dynamic RIPv2 across core routers (Dhaka-Sylhet-Rajshahi) alongside floating static backup routes with elevated administrative distances for instant failover rerouting.</span>
-                </li>
-                <li class="project-highlight-item">
-                  <span class="highlight-pip" aria-hidden="true"></span>
-                  <span><strong class="highlight-key">Enterprise Infrastructure:</strong> Designed hierarchical 10.79.0.0/16 VLSM addressing down to /30 serial links, centralized DHCP relay via ip helper-address, localized DNS (.edu.bd), and SMTP/POP3 mail infrastructure.</span>
-                </li>
-              </ul>
-              <div class="project-tags">
-                <span class="tech-tag">Cisco Packet Tracer</span>
-                <span class="tech-tag">VLSM Subnetting</span>
-                <span class="tech-tag">RIPv2 Dynamic Routing</span>
-                <span class="tech-tag">Floating Static Failover</span>
-                <span class="tech-tag">DHCP Relay &amp; DNS</span>
-                <span class="tech-tag">Network Architecture</span>
-              </div>
-              <div class="project-card-footer">
-                <a href="https://github.com/Debopriyo-Karmaker/BoardNet-Enterprise-Network" target="_blank" rel="noopener noreferrer" class="project-action-link" id="project-link-boardnet">
-                  <span>View GitHub Repository</span>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 6: MediCore Smart Medical Management Platform -->
-          <article class="project-card cyber-card theme-cyan" data-tilt>
-            <div class="corner-elements" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="cyber-lines" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="scan-line" aria-hidden="true"></div>
-            <div class="glowing-elements" aria-hidden="true"><div class="glow-orb"></div></div>
-            <div class="card-glare"></div>
-
-            <div class="card-preview-stage">
-              <div class="preview-browser-bar">
-                <div class="browser-dots">
-                  <span class="dot dot-close"></span>
-                  <span class="dot dot-minimize"></span>
-                  <span class="dot dot-maximize"></span>
-                </div>
-                <span class="preview-path">~/healthcare/medicore-suite</span>
-                <span class="preview-status-badge badge-cyan"><span class="badge-pulse-dot"></span>CLINICAL PORTAL</span>
-              </div>
-              <div class="preview-visual-body">
-                <div class="visual-mockup-screen">
-                  <div class="mockup-header-line">
-                    <span class="mockup-brand-logo logo-cyan">MediCore</span>
-                    <span class="chip-metric">ROLE: PRACTITIONER</span>
-                  </div>
-                  <div class="mockup-hero-banner">
-                    <div class="mockup-metric-chips chips-full">
-                      <span class="chip-metric">SEC: AES-256 DB</span>
-                      <span class="chip-metric">QUEUE: 24 Slots</span>
-                      <span class="chip-metric">LATENCY: 0.08ms API</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-                        <div class="card-content-inner">
-              <div class="project-card-header">
-                <span class="project-domain-badge">FULL-STACK WEB DEVELOPMENT</span>
-                <span class="project-status-pill pill-cyan">HEALTHCARE SUITE</span>
-              </div>
-              <h3 class="project-title">MediCore Clinical Management System</h3>
-              <p class="project-desc">
-                A full-stack healthcare platform engineered with relational database architectures, role-based access control (RBAC), encrypted patient medical record management, and clinical appointment queues built for strict medical data integrity.
-              </p>
-              <ul class="project-highlights">
-                <li class="project-highlight-item">
-                  <span class="highlight-pip" aria-hidden="true"></span>
-                  <span><strong class="highlight-key">Core Architecture:</strong> Implemented relational database schema with strict role authorization separating doctors, staff, and admin portals.</span>
-                </li>
-                <li class="project-highlight-item">
-                  <span class="highlight-pip" aria-hidden="true"></span>
-                  <span><strong class="highlight-key">Security Focus:</strong> Secured patient records with credential hashing, session isolation, and sub-millisecond query execution.</span>
-                </li>
-              </ul>
-              <div class="project-tags">
-                <span class="tech-tag">JavaScript / Node.js</span>
-                <span class="tech-tag">Relational Database</span>
-                <span class="tech-tag">Role-Based Auth</span>
-                <span class="tech-tag">REST APIs</span>
-                <span class="tech-tag">Full-Stack</span>
-              </div>
-              <div class="project-card-footer">
-                <a href="https://github.com/Debopriyo-Karmaker/Medicore" target="_blank" rel="noopener noreferrer" class="project-action-link">
-                  <span>View GitHub Repository</span>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 7: Security OSINT & Network Reconnaissance Suite -->
-          <article class="project-card cyber-card theme-amber" data-tilt>
-            <div class="corner-elements" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="cyber-lines" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="scan-line" aria-hidden="true"></div>
-            <div class="glowing-elements" aria-hidden="true"><div class="glow-orb"></div></div>
-            <div class="card-glare"></div>
-
-            <div class="card-preview-stage">
-              <div class="preview-browser-bar">
-                <div class="browser-dots">
-                  <span class="dot dot-close"></span>
-                  <span class="dot dot-minimize"></span>
-                  <span class="dot dot-maximize"></span>
-                </div>
-                <span class="preview-path">~/recon/osint_scanner.py</span>
-                <span class="preview-status-badge badge-amber"><span class="badge-pulse-dot"></span>RAW SOCKETS</span>
-              </div>
-              <div class="preview-visual-body">
-                <div class="visual-terminal-screen">
-                  <div class="terminal-row row-amber">TARGET: 104.21.48.192 [ASN 13335 CLOUDFLARE]</div>
-                  <div class="terminal-row row-white">PORT 22/TCP  [OPEN]  OpenSSH 8.9p1 Ubuntu</div>
-                  <div class="terminal-row row-white">PORT 443/TCP [OPEN]  TLSv1.3 AES-256-GCM</div>
-                  <div class="terminal-row row-cyan">GEO: Singapore (SG) · Latency: 18ms · SYN/ACK OK</div>
-                </div>
-              </div>
-            </div>
-
-                        <div class="card-content-inner">
-              <div class="project-card-header">
-                <span class="project-domain-badge">SECURITY RESEARCH &amp; NETWORKING</span>
-                <span class="project-status-pill pill-amber">RAW SOCKETS</span>
-              </div>
-              <h3 class="project-title">Network Recon &amp; OSINT Security Suite</h3>
-              <p class="project-desc">
-                Automated reconnaissance toolkit developed in Python using raw sockets. Features a high-speed TCP port scanner with service banner identification, automated IP geolocation, ASN mapping, and timezone enumeration via RESTful intelligence endpoints.
-              </p>
-              <ul class="project-highlights">
-                <li class="project-highlight-item">
-                  <span class="highlight-pip" aria-hidden="true"></span>
-                  <span><strong class="highlight-key">Socket Engine:</strong> Custom multithreaded TCP handshake scanner with banner grabbing for service version enumeration.</span>
-                </li>
-                <li class="project-highlight-item">
-                  <span class="highlight-pip" aria-hidden="true"></span>
-                  <span><strong class="highlight-key">OSINT Pipeline:</strong> Automated ASN lookup, IP geolocation enrichment, and open-source intelligence aggregation.</span>
-                </li>
-              </ul>
-              <div class="project-tags">
-                <span class="tech-tag">Python 3</span>
-                <span class="tech-tag">Socket Programming</span>
-                <span class="tech-tag">TCP Port Scanner</span>
-                <span class="tech-tag">OSINT Automation</span>
-                <span class="tech-tag">Network Recon</span>
-              </div>
-              <div class="project-card-footer">
-                <a href="https://github.com/Debopriyo-Karmaker/Custom-Security-OSINT-Utilities" target="_blank" rel="noopener noreferrer" class="project-action-link">
-                  <span>View GitHub Repository</span>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 8: BRACU SHIKARI CTF & Forensics Archive -->
-          <article class="project-card cyber-card theme-amber" data-tilt>
-            <div class="corner-elements" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="cyber-lines" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="scan-line" aria-hidden="true"></div>
-            <div class="glowing-elements" aria-hidden="true"><div class="glow-orb"></div></div>
-            <div class="card-glare"></div>
-
-            <div class="card-preview-stage">
-              <div class="preview-browser-bar">
-                <div class="browser-dots">
-                  <span class="dot dot-close"></span>
-                  <span class="dot dot-minimize"></span>
-                  <span class="dot dot-maximize"></span>
-                </div>
-                <span class="preview-path">~/shikari/ctf_forensics.pcap</span>
-                <span class="preview-status-badge badge-amber"><span class="badge-pulse-dot"></span>#8 BD · #244 WORLD</span>
-              </div>
-              <div class="preview-visual-body">
-                <div class="visual-security-screen">
-                  <div class="sec-status-row">
-                    <span class="sec-badge pass">CTFTIME: #8 BD</span>
-                    <span class="sec-badge pass">WORLD: #244</span>
-                    <span class="sec-badge pass">50+ THM LABS</span>
-                  </div>
-                  <div class="sec-payload-box">
-                    <span class="payload-label">WIRESHARK PCAP STREAM DISSECTION:</span>
-                    <code class="payload-code">FLAG{shikari_pcap_forensics_0x7b_solved}</code>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-                        <div class="card-content-inner">
-              <div class="project-card-header">
-                <span class="project-domain-badge">CYBERSECURITY &amp; CTF FORENSICS</span>
-                <span class="project-status-pill pill-amber">BRACU SHIKARI</span>
-              </div>
-              <h3 class="project-title">BRACU SHIKARI CTF &amp; Forensics Archive</h3>
-              <p class="project-desc">
-                Competitive challenge write-ups and forensic investigations with team BRACU SHIKARI (Ranked #8 in Bangladesh and #244 Globally on CTFtime). Detailed analysis of network packet captures in Wireshark, cryptography algorithms, and Linux privilege escalation vectors.
-              </p>
-              <ul class="project-highlights">
-                <li class="project-highlight-item">
-                  <span class="highlight-pip" aria-hidden="true"></span>
-                  <span><strong class="highlight-key">CTF Benchmark:</strong> Competitive solutions and write-ups representing BRACU SHIKARI (#8 in Bangladesh, #244 globally on CTFtime).</span>
-                </li>
-                <li class="project-highlight-item">
-                  <span class="highlight-pip" aria-hidden="true"></span>
-                  <span><strong class="highlight-key">Forensics Analysis:</strong> Deep Wireshark PCAP stream reconstruction, protocol anomalies, and cryptographic cipher cracking.</span>
-                </li>
-              </ul>
-              <div class="project-tags">
-                <span class="tech-tag">Wireshark</span>
-                <span class="tech-tag">PCAP Forensics</span>
-                <span class="tech-tag">Privilege Escalation</span>
-                <span class="tech-tag">Cryptography</span>
-                <span class="tech-tag">TryHackMe</span>
-              </div>
-              <div class="project-card-footer">
-                <a href="https://github.com/Debopriyo-Karmaker/CTF-Room-Writeups" target="_blank" rel="noopener noreferrer" class="project-action-link">
-                  <span>View GitHub Repository</span>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 9: Click-and-Build Hardware Compatibility Engine -->
-          <article class="project-card cyber-card theme-violet" data-tilt>
-            <div class="corner-elements" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="cyber-lines" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="scan-line" aria-hidden="true"></div>
-            <div class="glowing-elements" aria-hidden="true"><div class="glow-orb"></div></div>
-            <div class="card-glare"></div>
-
-            <div class="card-preview-stage">
-              <div class="preview-browser-bar">
-                <div class="browser-dots">
-                  <span class="dot dot-close"></span>
-                  <span class="dot dot-minimize"></span>
-                  <span class="dot dot-maximize"></span>
-                </div>
-                <span class="preview-path">~/hardware/pc-builder-engine</span>
-                <span class="preview-status-badge badge-violet"><span class="badge-pulse-dot"></span>PC ARCHITECTURE</span>
-              </div>
-              <div class="preview-visual-body">
-                <div class="visual-security-screen">
-                  <div class="sec-status-row">
-                    <span class="sec-badge pass">SOCKET AM5: MATCHED</span>
-                    <span class="sec-badge pass">TDP 650W [84%]</span>
-                    <span class="sec-badge pass">PCIe 5.0 CLEAR</span>
-                  </div>
-                  <div class="sec-payload-box">
-                    <span class="payload-label">COMPATIBILITY VALIDATOR:</span>
-                    <code class="payload-code">CHIPSET: X670E · CLEARANCE: 320mm · STATUS: OPTIMAL</code>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-                        <div class="card-content-inner">
-              <div class="project-card-header">
-                <span class="project-domain-badge">FULL-STACK WEB DEVELOPMENT</span>
-                <span class="project-status-pill pill-violet">PC ARCHITECTURE</span>
-              </div>
-              <h3 class="project-title">Click-and-Build Hardware Compatibility Engine</h3>
-              <p class="project-desc">
-                An interactive PC building platform and hardware compatibility checker. Evaluates complex socket, TDP power draw, and physical dimensional clearance constraints with database-driven component configuration.
-              </p>
-              <ul class="project-highlights">
-                <li class="project-highlight-item">
-                  <span class="highlight-pip" aria-hidden="true"></span>
-                  <span><strong class="highlight-key">Compatibility Engine:</strong> Relational constraint validator checking CPU sockets, RAM clearance, and GPU wattage headroom.</span>
-                </li>
-                <li class="project-highlight-item">
-                  <span class="highlight-pip" aria-hidden="true"></span>
-                  <span><strong class="highlight-key">Web Architecture:</strong> Dynamic component browsing, live price tallying, and instant build-state validation.</span>
-                </li>
-              </ul>
-              <div class="project-tags">
-                <span class="tech-tag">HTML5 / CSS3</span>
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">Hardware Constraints</span>
-                <span class="tech-tag">Component Matrix</span>
-                <span class="tech-tag">State Engine</span>
-              </div>
-              <div class="project-card-footer">
-                <a href="https://github.com/Debopriyo-Karmaker/Click-and-build-" target="_blank" rel="noopener noreferrer" class="project-action-link">
-                  <span>View GitHub Repository</span>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 10: TODO-FOR-EVERYDAY Minimalist Task Engine -->
-          <article class="project-card cyber-card theme-cyan" data-tilt>
-            <div class="corner-elements" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="cyber-lines" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="scan-line" aria-hidden="true"></div>
-            <div class="glowing-elements" aria-hidden="true"><div class="glow-orb"></div></div>
-            <div class="card-glare"></div>
-
-            <div class="card-preview-stage">
-              <div class="preview-browser-bar">
-                <div class="browser-dots">
-                  <span class="dot dot-close"></span>
-                  <span class="dot dot-minimize"></span>
-                  <span class="dot dot-maximize"></span>
-                </div>
-                <span class="preview-path">~/productivity/task-engine.js</span>
-                <span class="preview-status-badge badge-cyan"><span class="badge-pulse-dot"></span>LOCAL-FIRST</span>
-              </div>
-              <div class="preview-visual-body">
-                <div class="visual-terminal-screen">
-                  <div class="terminal-row row-cyan">[KEYBOARD SHORTCUTS] [Ctrl+K] Focus · [Enter] Add · [Esc] Clear</div>
-                  <div class="terminal-row row-white">[TASK 01] Implement POSIX Mutex Locks for Scheduler [DONE]</div>
-                  <div class="terminal-row row-white">[TASK 02] Verify SPF/DKIM Email Extraction Pipeline [ACTIVE]</div>
-                  <div class="terminal-row row-emerald">[STATE SYNC] Synchronous LocalStorage Hydration: 0.02ms</div>
-                </div>
-              </div>
-            </div>
-
-                        <div class="card-content-inner">
-              <div class="project-card-header">
-                <span class="project-domain-badge">CLIENT WEB UTILITY</span>
-                <span class="project-status-pill pill-cyan">LOCAL-FIRST</span>
-              </div>
-              <h3 class="project-title">TODO-FOR-EVERYDAY Minimalist Task Engine</h3>
-              <p class="project-desc">
-                A focused, lightweight web productivity tool engineered for rapid execution. Features synchronous local storage persistence, responsive keyboard shortcut navigation, and sub-millisecond DOM updates without bulky dependencies.
-              </p>
-              <ul class="project-highlights">
-                <li class="project-highlight-item">
-                  <span class="highlight-pip" aria-hidden="true"></span>
-                  <span><strong class="highlight-key">State Persistence:</strong> Synchronous local storage hydration ensuring instant 0ms state recovery and zero data loss.</span>
-                </li>
-                <li class="project-highlight-item">
-                  <span class="highlight-pip" aria-hidden="true"></span>
-                  <span><strong class="highlight-key">Performance Focus:</strong> Lightweight DOM manipulation, zero framework overhead, and streamlined keyboard shortcuts.</span>
-                </li>
-              </ul>
-              <div class="project-tags">
-                <span class="tech-tag">Vanilla JavaScript</span>
-                <span class="tech-tag">Local Storage API</span>
-                <span class="tech-tag">High Performance</span>
-                <span class="tech-tag">DOM Optimization</span>
-                <span class="tech-tag">Web Productivity</span>
-              </div>
-              <div class="project-card-footer">
-                <a href="https://github.com/Debopriyo-Karmaker/TODO-FOR-EVERYDAY" target="_blank" rel="noopener noreferrer" class="project-action-link">
-                  <span>View GitHub Repository</span>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                </a>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Technical Capabilities -->
-    <section class="section-padding capabilities-section" id="capabilities">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">03 // TECHNICAL EXPERTISE</span>
-          <h2 class="section-title">Core capabilities across cybersecurity &amp; web development.</h2>
-          <p class="section-subtext">A disciplined combination of offensive &amp; defensive security research, modern web application engineering, and low-level Linux systems programming.</p>
-        </div>
-
-        <div class="bento-grid">
-          <!-- Bento 1: Cybersecurity & Threat Intel -->
-          <div class="bento-card bento-wide cyber-card theme-emerald" data-tilt>
-            <div class="corner-elements" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="card-inner-relative">
-              <div class="bento-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              </div>
-              <h3 class="bento-title">Cybersecurity &amp; Blue Team Defense</h3>
-              <p class="bento-desc">Vulnerability assessment, threat intelligence ingestion, automated IOC extraction, and OWASP Top 10 mitigation. Active competitive CTF player for BRACU SHIKARI (#8 Bangladesh on CTFtime).</p>
-              <div class="skill-pill-wrap">
-                <span class="skill-pill">Wireshark</span>
-                <span class="skill-pill">Burp Suite</span>
-                <span class="skill-pill">Nmap</span>
-                <span class="skill-pill">OWASP ZAP</span>
-                <span class="skill-pill">IOC Extraction</span>
-                <span class="skill-pill">Threat Triage</span>
-                <span class="skill-pill">CTFtime #8 BD</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Bento 2: Full-Stack Web Development -->
-          <div class="bento-card bento-wide cyber-card theme-cyan" data-tilt>
-            <div class="corner-elements" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="card-inner-relative">
-              <div class="bento-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-              </div>
-              <h3 class="bento-title">Modern Web Development</h3>
-              <p class="bento-desc">Designing and building production client websites and full-stack web applications. Delivering clean typography, sub-second load performance, and secure database backends.</p>
-              <div class="skill-pill-wrap">
-                <span class="skill-pill">HTML5 / Modern CSS</span>
-                <span class="skill-pill">JavaScript (ES6+)</span>
-                <span class="skill-pill">React</span>
-                <span class="skill-pill">Node.js</span>
-                <span class="skill-pill">DIGIX Web Development</span>
-                <span class="skill-pill">REST APIs</span>
-                <span class="skill-pill">PostgreSQL / SQL</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Bento 3: Systems & Low-Level Concurrency -->
-          <div class="bento-card cyber-card theme-violet" data-tilt>
-            <div class="corner-elements" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="card-inner-relative">
-              <div class="bento-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-              </div>
-              <h3 class="bento-title">Low-Level Systems &amp; Concurrency</h3>
-              <p class="bento-desc">Solid foundation in C (C11), POSIX threads (pthreads), mutex synchronization, memory safety, and shared memory IPC.</p>
-              <div class="skill-pill-wrap">
-                <span class="skill-pill">C (C11)</span>
-                <span class="skill-pill">POSIX Threads</span>
-                <span class="skill-pill">Mutex Locks</span>
-                <span class="skill-pill">Memory Safety</span>
-                <span class="skill-pill">Linux Syscalls</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Bento 4: Infrastructure & OSINT -->
-          <div class="bento-card cyber-card theme-amber" data-tilt>
-            <div class="corner-elements" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="card-inner-relative">
-              <div class="bento-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m10 15 5-3-5-3v6Z"></path></svg>
-              </div>
-              <h3 class="bento-title">Infrastructure, Networks &amp; OSINT</h3>
-              <p class="bento-desc">Enterprise network architecture (Cisco Packet Tracer, VLSM, RIPv2), Unix/Linux environments (Kali Linux, Ubuntu), Git version control, raw socket networking, and automated OSINT reconnaissance.</p>
-              <div class="skill-pill-wrap">
-                <span class="skill-pill">Cisco Packet Tracer</span>
-                <span class="skill-pill">VLSM / RIPv2</span>
-                <span class="skill-pill">Linux / Bash</span>
-                <span class="skill-pill">Kali Linux</span>
-                <span class="skill-pill">Git &amp; GitHub</span>
-                <span class="skill-pill">Socket Programming</span>
-                <span class="skill-pill">OSINT APIs</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 04: Experience & Education -->
-    <section class="section-padding experience-section" id="experience">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">04 // CHRONICLE</span>
-          <h2 class="section-title">Academic foundations &amp; security leadership.</h2>
-        </div>
-
-        <div class="timeline-wrap">
-          <!-- BRACU SHIKARI -->
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-meta">
-                <span class="timeline-role">Active CTF Player — BRACU SHIKARI</span>
-                <span class="timeline-date">Rank #8 BD · #244 World</span>
-              </div>
-              <p class="timeline-org">BRACU SHIKARI · <a href="https://ctftime.org/team/433462/" target="_blank" rel="noopener noreferrer" class="bio-link">CTFtime Profile</a></p>
-              <p class="timeline-desc">
-                Competitive CTF challenges covering web security, network protocol forensics in Wireshark, and cryptography.
-              </p>
-            </div>
-          </div>
-
-          <!-- BRAC University -->
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-meta">
-                <span class="timeline-role">B.Sc. in Computer Science and Engineering</span>
-                <span class="timeline-date">2023 – 2027</span>
-              </div>
-              <p class="timeline-org">BRAC University · Dhaka, Bangladesh</p>
-              <p class="timeline-desc">
-                Core coursework in Operating Systems, Computer Networks, Artificial Intelligence, and Information Security.
-              </p>
-            </div>
-          </div>
-
-          <!-- Cybersecurity Educator -->
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-meta">
-                <span class="timeline-role">Cybersecurity Educator — Ethical Hacking Bootcamp</span>
-                <span class="timeline-date">Leadership</span>
-              </div>
-              <p class="timeline-org">BRAC University · Department of CSE</p>
-              <p class="timeline-desc">
-                Mentored students on core cybersecurity concepts, practical vulnerability discovery, and defensive methodologies.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section-padding contact-section" id="contact">
-      <div class="container">
-        <div class="contact-grid">
-          <!-- Left Column: Direct Channels & CV Card -->
-          <div class="contact-lead">
-            <span class="section-eyebrow">05 // GET IN TOUCH</span>
-            <h2 class="contact-title">Let's connect and build something resilient.</h2>
-            <p class="contact-desc">
-              Currently seeking a <strong>Cybersecurity Internship</strong> or <strong>Web Development</strong> role where technical rigor, defensive security, and clean modern execution matter.
-            </p>
-
-            <!-- Dedicated CV Download Card -->
-            <div class="cv-download-box">
-              <div class="cv-box-left">
-                <span class="cv-badge">OFFICIAL RESUME</span>
-                <h4 class="cv-box-title">Debopriyo Karmaker — CV (PDF)</h4>
-                <p class="cv-box-meta">Updated 2026 · Full Technical Dossier · 25 KB</p>
-              </div>
-              <a href="Debopriyo_Karmaker_CV.pdf" target="_blank" rel="noopener noreferrer" download="Debopriyo_Karmaker_CV.pdf" class="btn-cv-download-action" title="Download Debopriyo Karmaker CV">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span>Download CV</span>
-              </a>
-            </div>
-
-            <div class="contact-channels">
-              <a href="mailto:debopriyokarmaker@gmail.com" class="channel-link">
-                <span class="channel-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                </span>
-                <span class="channel-text">debopriyokarmaker@gmail.com</span>
-              </a>
-
-              <a href="https://ctftime.org/team/433462/" target="_blank" rel="noopener noreferrer" class="channel-link">
-                <span class="channel-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                </span>
-                <span class="channel-text">ctftime.org/team/433462 (BRACU SHIKARI)</span>
-              </a>
-
-              <a href="https://github.com/Debopriyo-Karmaker" target="_blank" rel="noopener noreferrer" class="channel-link">
-                <span class="channel-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </span>
-                <span class="channel-text">github.com/Debopriyo-Karmaker</span>
-              </a>
-
-              <a href="https://linkedin.com/in/dkarmaker" target="_blank" rel="noopener noreferrer" class="channel-link">
-                <span class="channel-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                </span>
-                <span class="channel-text">linkedin.com/in/dkarmaker</span>
-              </a>
-
-              <a href="https://tryhackme.com/p/debopriyokarmaker" target="_blank" rel="noopener noreferrer" class="channel-link">
-                <span class="channel-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path><path d="m14.83 9.17 4.24-4.24"></path><path d="m14.83 14.83 4.24 4.24"></path><path d="m9.17 14.83-4.24 4.24"></path></svg>
-                </span>
-                <span class="channel-text">tryhackme.com/p/debopriyokarmaker</span>
-              </a>
-
-              <div class="channel-link status-time-channel">
-                <span class="channel-icon status-live-dot" aria-hidden="true"></span>
-                <span class="channel-text" id="live-time-display">02:45:00 DHAKA (UTC+6)</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right Column: Contact Form -->
-          <div class="contact-form-card" id="contact-form-card">
-            <form class="clean-form" id="contact-form" action="https://formsubmit.co/eca721d44f6e2f6acf5009b49c801f04" method="POST">
-              <!-- Anti-spam Honeypot -->
-              <input type="text" name="_honey" class="hidden-field" tabindex="-1" autocomplete="off" aria-hidden="true">
-              <!-- Form Configuration -->
-              <input type="hidden" name="_subject" value="New Portfolio Inquiry from Portfolio Website">
-              <input type="hidden" name="_template" value="table">
-              <input type="hidden" name="_captcha" value="false">
-
-              <div class="form-group">
-                <label for="form-name" class="form-label">Your Name</label>
-                <div class="form-input-container">
-                  <span class="input-icon-slot" aria-hidden="true">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                  </span>
-                  <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. Alex Morgan" maxlength="80" autocomplete="name" required>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="form-email" class="form-label">Email Address</label>
-                <div class="form-input-container">
-                  <span class="input-icon-slot" aria-hidden="true">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                  </span>
-                  <input type="email" id="form-email" name="email" class="form-input" placeholder="alex@company.com" maxlength="100" autocomplete="email" pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$" required>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="form-message" class="form-label">Message</label>
-                <div class="form-input-container textarea-container">
-                  <span class="input-icon-slot" aria-hidden="true">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-                  </span>
-                  <textarea id="form-message" name="message" class="form-textarea" rows="4" placeholder="Discuss a project, cybersecurity internship, or web development..." maxlength="2500" required></textarea>
-                </div>
-              </div>
-
-              <button type="submit" class="btn-submit cyber-btn-submit" id="form-submit-btn">
-                <span class="submit-spinner" aria-hidden="true"></span>
-                <span id="submit-btn-text">Send Message</span>
-                <svg id="submit-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-              </button>
-              <div class="form-status" id="form-status" aria-live="polite"></div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-container">
-      <p class="footer-copy">&copy; 2026 Debopriyo Karmaker. All rights reserved.</p>
-      <a href="#hero" class="back-to-top">
-        <span>Back to Top</span>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
-      </a>
+<div class="wrap">
+<nav aria-label="Primary">
+  <a class="logo" href="#top" aria-label="Debopriyo Karmaker, home"><b>DK</b>DEBOPRIYO KARMAKER</a>
+  <div class="links"><a href="#about">About</a><a href="#flagships">Work</a><a href="#capabilities">Skills</a><a href="#experience">Chronicle</a><a href="#contact">Contact</a></div>
+  <div class="avail"><i></i>Open to work <a href="#contact">DISPATCH →</a></div>
+</nav>
+
+<header class="hero" id="top">
+  <h1 class="big" aria-label="Portfolio">PORTFOLIO</h1>
+  <div class="hero-grid">
+    <div>
+      <p class="hello">Hello, I'm</p>
+      <div class="name">Debopriyo.</div><br>
+      <div class="role"><i></i>Cybersecurity researcher &amp; systems developer</div>
+      <p class="intro">Crafting <b>resilient systems</b> and <b>refined digital experiences</b>. CTF player, <b>machine learning practitioner</b> and <b>freelance web developer</b> based in Dhaka, Bangladesh.</p>
+      <div class="cta"><a class="btn p" href="#contact">Get in touch →</a><a class="btn" href="#flagships">Explore work</a></div>
     </div>
-  </footer>
+    <div class="photo">
+      <div class="stage" id="stage">
+        <div class="halo"></div>
+        <img class="cut main" src="cutout.webp" alt="Cut-out portrait of Debopriyo Karmaker in a dark suit" width="640" height="797">
+        <span class="badge"><i></i>Open to internships</span>
+      </div>
+    </div>
+    <div class="rail">
+      <div class="floatcard"><span>01. COMPETITION</span><span class="eq"><i></i><i></i><i></i><i></i></span><h4>BRACU SHIKARI</h4><p>CTF team ranked #8 in Bangladesh and #244 worldwide on CTFtime.</p></div>
+      <div class="floatcard"><span>02. TEACHING</span><span class="eq"><i></i><i></i><i></i><i></i></span><h4>Ethical Hacking Bootcamp</h4><p>Cybersecurity educator at BRAC University.</p></div>
+      <div class="floatcard"><span>03. FREELANCE</span><span class="eq"><i></i><i></i><i></i><i></i></span><h4>DIGIX Website</h4><p>Corporate site in HTML5, CSS3 and vanilla JavaScript.</p></div>
+    </div>
+  </div>
+  <div class="stats">
+    <div class="stat"><b><em>#8</em></b><span>Bangladesh · CTFtime</span></div>
+    <div class="stat"><b>50+</b><span>TryHackMe labs</span></div>
+    <div class="stat"><b>10</b><span>Projects on GitHub</span></div>
+  </div>
+</header>
 
-  <!-- Script (Cache-busted) -->
-  <script src="script.js?v=10.1"></script>
+<section id="about">
+  <div class="eyebrow">Engineer profile</div>
+  <h2>Biography &amp; Engineering <em>Dossier</em></h2>
+  <div class="about-grid">
+    <div>
+      <p>I am Debopriyo Karmaker, a <strong>Computer Science and Engineering</strong> student at <strong>BRAC University</strong> (class of 2027), based in Dhaka, Bangladesh. My work sits between cybersecurity research, machine learning and web development.</p>
+      <p>I compete in CTFs with <strong>BRACU SHIKARI</strong>, teach as a cybersecurity educator in the university's Ethical Hacking Bootcamp, and build sites as a freelance web developer. Coursework covers operating systems, concurrency, AI and ML, enterprise networking, database systems and security engineering.</p>
+      <blockquote>Crafting resilient systems and refined digital experiences. Currently seeking a cybersecurity internship or web development role.</blockquote>
+    </div>
+    <div>
+      <div class="pillar"><i>01</i><div><h3>Cybersecurity research</h3><p>Threat triage, IOC extraction, packet forensics and web application testing.</p></div></div>
+      <div class="pillar"><i>02</i><div><h3>Systems engineering</h3><p>C11, POSIX threads, shared-memory IPC and Linux syscalls.</p></div></div>
+      <div class="pillar"><i>03</i><div><h3>Applied machine learning</h3><p>Scikit-Learn pipelines judged by measured accuracy and ROC-AUC.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="flagships">
+  <div class="eyebrow">Featured work</div>
+  <h2>Security Research &amp; <em>Tooling</em></h2>
+  <p class="lede">Tools and write-ups built while competing in CTFs, teaching in the Ethical Hacking Bootcamp and working through TryHackMe labs.</p>
+
+  <article class="flag">
+    <span class="tag">Cybersecurity</span>
+    <h3>Threat analysis, recon and forensics</h3>
+    <p>Three projects that cover the analyst workflow: reading a suspicious email, mapping a target, and working a packet capture.</p>
+    <div class="metrics"><div><b>50+</b><span>THM labs</span></div><div><b>#8</b><span>Bangladesh</span></div><div><b>#244</b><span>Worldwide</span></div><div><b>10</b><span>Projects</span></div></div>
+    <div class="stackhead">Featured security projects</div>
+    <div class="hint">Select a project to inspect it.</div>
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <div class="layer" id="layer" role="tabpanel" aria-live="polite"></div>
+  </article>
+
+  <div class="flag2 mt20">
+    <article class="flag"><span class="tag">Machine learning</span><h3>Credit Risk Assessment &amp; Loan Status Prediction</h3><p>An ML pipeline over 45,000 records using an MLP classifier. The model reaches 91.53% accuracy and a 0.9660 ROC-AUC.</p><div class="chips mt16"><span class="chip">Python</span><span class="chip">Scikit-Learn</span><span class="chip">Pandas</span><span class="chip">NumPy</span></div></article>
+    <article class="flag"><span class="tag">Web development</span><span class="status"><i></i>Currently in development</span><h3>DIGIX Corporate Website</h3><p>A freelance web development project: a corporate website for DIGIX, built with HTML5, CSS3 and vanilla JavaScript. Self-reported audit: 0.4s first contentful paint and a 100/100 score.</p><div class="chips mt16"><span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">Vanilla JavaScript</span></div></article>
+  </div>
+</section>
+
+<section id="matrix">
+  <div class="eyebrow">Selected works</div>
+  <h2>Ten Projects, <em>Four Disciplines</em></h2>
+  <p class="lede">Security, systems and networks, machine learning, and the web. Every card links to its repository.</p>
+  <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
+  <div class="card-grid" id="grid"></div>
+</section>
+
+<section id="capabilities">
+  <div class="eyebrow">Technical expertise</div>
+  <h2><em>Capabilities</em></h2>
+  <p class="lede">The tools and languages I reach for, grouped by the kind of problem they solve.</p>
+  <div class="card-grid mt30">
+    <article class="card"><div class="top"><span class="tag">Cybersecurity</span></div><div class="chips"><span class="chip">Wireshark</span><span class="chip">Burp Suite</span><span class="chip">Nmap</span><span class="chip">OWASP ZAP</span><span class="chip">OWASP Top 10</span><span class="chip">IOC extraction</span><span class="chip">Threat triage</span></div></article>
+    <article class="card"><div class="top"><span class="tag">Web</span></div><div class="chips"><span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">JavaScript ES6+</span><span class="chip">React</span><span class="chip">Node.js</span><span class="chip">REST APIs</span><span class="chip">PostgreSQL</span></div></article>
+    <article class="card"><div class="top"><span class="tag">Systems</span></div><div class="chips"><span class="chip">C11</span><span class="chip">POSIX threads</span><span class="chip">Mutex locks</span><span class="chip">Shared-memory IPC</span><span class="chip">Linux syscalls</span></div></article>
+    <article class="card"><div class="top"><span class="tag">Infrastructure</span></div><div class="chips"><span class="chip">Cisco Packet Tracer</span><span class="chip">VLSM</span><span class="chip">RIPv2</span><span class="chip">Kali Linux</span><span class="chip">Ubuntu</span><span class="chip">Git</span><span class="chip">Socket programming</span><span class="chip">OSINT</span></div></article>
+    <article class="card"><div class="top"><span class="tag">Machine learning</span></div><div class="chips"><span class="chip">Python</span><span class="chip">Scikit-Learn</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Neural networks (MLP)</span></div></article>
+    <article class="card"><div class="top"><span class="tag">Certifications</span></div><div class="chips"><span class="chip">Deloitte Australia Cyber Job Simulation</span><span class="chip">Linux for Data Engineers</span><span class="chip">IT &amp; Cybersecurity 101</span><span class="chip">Cybersecurity for Beginners</span><span class="chip">Data Science Statistics</span></div></article>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="eyebrow">Experience &amp; leadership</div>
+  <h2><em>Chronicle</em></h2>
+  <div class="timeline">
+    <div class="row"><div class="k">Education · 2023–2027</div><div><h3>B.Sc. in Computer Science and Engineering</h3><p>BRAC University. Coursework includes operating systems, concurrency, AI and ML, enterprise networking, database systems and security engineering.</p></div></div>
+    <div class="row"><div class="k">Teaching</div><div><h3>Cybersecurity Educator</h3><p>BRAC University Ethical Hacking Bootcamp.</p></div></div>
+    <div class="row"><div class="k">Competition</div><div><h3>CTF Player, BRACU SHIKARI</h3><p>The team is ranked #8 in Bangladesh and #244 worldwide on CTFtime.</p></div></div>
+    <div class="row"><div class="k">Freelance</div><div><h3>Web Developer</h3><p>Includes the DIGIX corporate website, currently in development.</p></div></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact">
+    <div class="eyebrow">Get in touch</div>
+    <h2>Let's Build Something <em>Resilient.</em></h2>
+    <p class="lede">Open to a cybersecurity internship or a web development role. Write to me, or find my work on the profiles below.</p>
+    <div class="mail"><code id="email">debopriyokarmaker@gmail.com</code><button class="btn red" id="copy" type="button">Copy email address</button></div>
+    <div class="socials">
+      <a href="https://github.com/Debopriyo-Karmaker" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/dkarmaker" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://tryhackme.com/p/debopriyokarmaker" target="_blank" rel="noopener noreferrer">TryHackMe</a>
+      <a href="https://ctftime.org/team/433462" target="_blank" rel="noopener noreferrer">CTFtime</a>
+      <a href="https://debopriyokarmaker.vercel.app/Debopriyo_Karmaker_CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+    </div>
+  </div>
+</section>
+<footer>© 2026 Debopriyo Karmaker. All rights reserved.</footer>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
